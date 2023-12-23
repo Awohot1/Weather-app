@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "fullName": "Awolola Taiwo",
+      "email": "awohot4greatness@gmail.com",
+      "password": "111111",
+      "cPassword": "111111",
+      "id": 1
+    }
+  ]
+}

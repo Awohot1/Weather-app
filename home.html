@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App | Home</title>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/stylesheets/style.css">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/046080561d.js" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Javascript -->
+  <script type="module" defer src="./assets/scripts/home.js"></script>
+</head>
+
+<body class="home">
+  <div class="main">
+    <h2 class="welcome">Welcome back, <span>John</span></h2>
+    <div class="search-box">
+      <div class="search"><input type="text" class="search-input" placeholder="Search for a city"></div>
+      <div class="search-icon"><i class="fa-solid fa-search"></i></div>
+    </div>
+    <div class="cloud-details">
+      <img src="./assets/images/clear sky.png" alt="" class="weather-img">
+      <h4 class="weather-text">Cloudy and rainy</h4>
+    </div>
+    <h2 class="temp-details">
+      21 <span>℃</span>
+    </h2>
+    <div class="location">
+      <i class="fa-solid fa-location-dot"></i>
+      <span class="city-name"></span>
+    </div>
+    <div class="date"></div>
+    <div class="next"><a href="#">Next Hours <span><i class="fa-solid fa-arrow-circle-right"></i></span></a>
+    </div>
+    <div class="weather-data">
+      <div class="wind-speed">
+        <img src="/assets/images/wind.png" alt="" class="wind-img">
+        <div class="container">
+          <div class="title">Wind Speed</div>
+          <div class="wind-text">20km/h</div>
+        </div>
+      </div>
+      <div class="humidity">
+        <img src="assets/images/humidity.png" alt="" class="humidity-img">
+        <div class="container">
+          <div class="title">Humidity</div>
+          <div class="humidity-text">50%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Forecast -->
+  <div class="forecast hide">
+
+    <div class="head">
+      <div class="calendar"><span><i class="fa-solid fa-calendar-days"></i></span> 3HR Forecast
+      </div>
+    </div>
+    <table class="table">
+      <thead class="table-head">
+        <td>Day</td>
+        <td>Weather-Desc</td>
+        <td>Temp(℃)</td>
+      </thead>
+      <tr class="table-row">
+        <td class="hours"></td>
+        <td class="desc"><img src="./assets/images/few clouds.png" alt="" class="desc-img">
+          <p class="desc-text">Clouds</p>
+        </td>
+        <td class="temp">17</td>
+      </tr>
+      <tr class="table-row">
+        <td class="hours"></td>
+        <td class="desc"><img src="./assets/images/clear sky.png" alt="" class="desc-img">
+          <p class="desc-text">Cloudy</p>
+        </td>
+        <td class="temp">17</td>
+      </tr>
+      <tr class="table-row">
+        <td class="hours"></td>
+        <td class="desc"><img src="./assets/images/clear sky.png" alt="" class="desc-img">
+          <p class="desc-text">Rains</p>
+        </td>
+        <td class="temp">17</td>
+      </tr>
+      <tr class="table-row">
+        <td class="hours"></td>
+        <td class="desc"><img src="./assets/images/clear sky.png" alt="" class="desc-img">
+          <p class="desc-text">Cloudy</p>
+        </td>
+        <td class="temp">17</td>
+      </tr>
+      <tr class="table-row">
+        <td class="hours"></td>
+        <td class="desc"><img src="./assets/images/clear sky.png" alt="" class="desc-img">
+          <p class="desc-text">Cloudy</p>
+        </td>
+        <td class="temp">17</td>
+      </tr>
+      <tr class="table-row">
+        <td class="hours"></td>
+        <td class="desc"><img src="./assets/images/clear sky.png" alt="" class="desc-img">
+          <p class="desc-text">Cloudy</p>
+        </td>
+        <td class="temp">17</td>
+      </tr>
+      <tr class="table-row">
+        <td class="hours"></td>
+        <td class="desc"><img src="./assets/images/clear sky.png" alt="" class="desc-img">
+          <p class="desc-text">Cloudy</p>
+        </td>
+        <td class="temp">17</td>
+      </tr>
+      <tr class="table-row">
+        <td class="hours"></td>
+        <td class="desc"><img src="./assets/images/clear sky.png" alt="" class="desc-img">
+          <p class="desc-text">Cloudy</p>
+        </td>
+        <td class="temp">17</td>
+      </tr>
+    </table>
+  </div>
+
+
+</body>
+
+</html>

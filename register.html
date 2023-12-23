@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App | Register</title>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/stylesheets/style.css">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/046080561d.js" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Javascript -->
+  <script defer src="./assets/scripts/register.js"></script>
+</head>
+
+<body>
+  <main>
+    <div class="register-box">
+      <div>
+        <h2>Register</h2>
+        <small>Create your account</small>
+      </div>
+      <form class="input-box">
+
+        <!-- Full Name-->
+        <div>
+          <div class="name-box input">
+            <div><i class="fa-regular fa-user"></i></div> <input type="text" name="fullName" placeholder="Full name"
+              data-set="name" autocomplete="name" class="name">
+          </div>
+          <small class="name-error error hide">Invalid name</small>
+        </div>
+
+        <!-- Email -->
+        <div>
+          <div class="email-box input">
+            <div><i class="fa-regular fa-envelope"></i></div> <input type="text" name="email" placeholder="Email"
+              data-set="email" autocomplete="email" class="email">
+          </div>
+          <small class="email-error error hide">Invalid email</small>
+        </div>
+
+        <!--  Password -->
+        <div>
+          <div class="input">
+            <div>
+              <i class="fa-solid fa-key"></i>
+            </div>
+            <div class="password-box">
+              <input type="password" minlength="6" name="password" placeholder="Password" data-set="password"
+                class="password">
+              <button class="eye">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+              <button class="eye-slash hide">
+                <i class="fa-regular fa-eye-slash"></i>
+              </button>
+            </div>
+          </div>
+          <small class="password-error error hide">Invalid password</small>
+        </div>
+
+        <!-- Confirm Password -->
+        <div>
+          <div class=" input">
+            <div>
+              <i class="fa-solid fa-key"></i>
+            </div>
+            <div class="password-box">
+              <input type="password" name="cpassword" placeholder="Confirm Password" data-set="confirm-password"
+                class="c-password">
+              <button class="eye">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+              <button class="eye-slash hide">
+                <i class="fa-regular fa-eye-slash"></i>
+              </button>
+            </div>
+          </div>
+          <small class="cpassword-error error hide">Confirm Password and password must be equal</small>
+        </div>
+
+        <input type="submit" class="fill-btn register-btn" />
+      </form>
+      <div class="checkbox">
+        <h5>Already have an account?</h5>
+        <a href="index.html" class="register plain-btn">Sign in </a>
+      </div>
+    </div>
+
+  </main>
+  <div class="warning">
+    <div class="overlay">
+
+    </div>
+    <div class="disclaimer">
+      <h3 class="warning-txt">Disclaimer!!!</h3>
+      <p class="warning-p">This website is for practical purpose. The developer is not liable for any loss of
+        information, only use a
+        dummy
+        password and email address.
+        Thanks</p>
+    </div>
+  </div>
+</body>
+
+</html>
