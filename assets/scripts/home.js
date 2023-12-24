@@ -71,7 +71,7 @@ async function checkWeather() {
   }
 
   //Forecast Data
-  const apiForecast = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKeyF}&units=metric`;
+  const apiForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKeyF}&units=metric`;
   try {
     const response = await fetch(apiForecast);
     const data = await response.json();
