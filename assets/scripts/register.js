@@ -84,7 +84,6 @@ async function handleSubmit(e) {
     cPasswordError.classList.remove("hide");
     errorLog.cPassword = "true";
   }
-
   //Submit data to JSON server
   if (Object.keys(errorLog).length === 0) {
     //Post data into user object
