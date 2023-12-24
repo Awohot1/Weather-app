@@ -1,14 +1,4 @@
 "use strict";
-const jsonServer = require("json-server"); // importing json-server library
-const server = jsonServer.create();
-const router = jsonServer.router("db.json");
-const middlewares = jsonServer.defaults();
-const port = process.env.PORT || 8080; //  chose port from here like 8080, 3001
-
-server.use(middlewares);
-server.use(router);
-
-server.listen(port);
 
 const signIn = document.querySelector("#sign-in");
 const accountBox = document.querySelector(".account-box");
@@ -31,8 +21,6 @@ page.addEventListener("click", (e) => {
     accountBox.classList.remove("show-account");
   } else if (target === signIn) {
     accountBox.classList.add("show-account");
-    // } else if (target === sign) {
-    //   target.preventDefault;
   } else return;
 });
 
@@ -66,10 +54,6 @@ passwordBox.addEventListener("click", (e) => {
   } else return;
 });
 
-// const sign = document.querySelector(".sign").querySelector("a");
-//check if email-input is not empty
-//password input is upto 6 and not empty
-
 var formData = new FormData();
 
 formData.append("email", "");
@@ -89,10 +73,12 @@ async function handleLogIn(e) {
   let errorLog = {};
 
   // Validate Form
+  //check if email-input is not empty
   if (email.value === "" || email.value.length < 9) {
     emailError.classList.remove("hide");
     errorLog.email = "true";
   }
+  //password input is must be upto 6 and not empty
   if (password.value === "" || password.value.length < 6) {
     passwordError.classList.remove("hide");
     errorLog.password = "true";
@@ -101,7 +87,7 @@ async function handleLogIn(e) {
     //Submit data to JSON server
     if (Object.keys(errorLog).length === 0) {
       //Post data into user object
-      const response = await fetch("http://localhost:8000/users");
+      const response = await fetch("https://users-5kx9.onrender.com/users");
       const result = await response.json();
       await result.map((user) => {
         if (user.email === formData.email) {

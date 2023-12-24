@@ -87,7 +87,7 @@ async function handleSubmit(e) {
   //Submit data to JSON server
   if (Object.keys(errorLog).length === 0) {
     //Post data into user object
-    const response = await fetch("http://localhost:8000/users", {
+    const response = await fetch("https://users-5kx9.onrender.com/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
