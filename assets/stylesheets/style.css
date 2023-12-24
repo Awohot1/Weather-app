@@ -395,7 +395,7 @@ Home page
     margin-inline: auto;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 768px) {
   .home {
     flex-wrap: wrap;
   }
