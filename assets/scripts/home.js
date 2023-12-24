@@ -46,6 +46,7 @@ setInterval(updateDateAndTime, 1000);
 
 async function checkWeather() {
   const apiKey = "b2cb252543663a659353a544189d62a4";
+  const apiKeyF = "2af28d613aa092544224590151c6bacb";
   // const apiGeo = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
   const city = searchInput.value;
 
@@ -70,7 +71,7 @@ async function checkWeather() {
   }
 
   //Forecast Data
-  const apiForecast = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  const apiForecast = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKeyF}&units=metric`;
   try {
     const response = await fetch(apiForecast);
     const data = await response.json();
