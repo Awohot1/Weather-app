@@ -10,6 +10,8 @@ const password = document.querySelector(".password");
 const logInBtn = document.querySelector(".log-in");
 const emailError = document.querySelector(".email-error");
 const passwordError = document.querySelector(".password-error");
+const loadingOverlay = document.querySelector(".loading-overlay");
+const loading = document.querySelector(".loading");
 
 //Show and Hide Sign In Box
 page.addEventListener("click", (e) => {
@@ -86,6 +88,9 @@ async function handleLogIn(e) {
   try {
     //Submit data to JSON server
     if (Object.keys(errorLog).length === 0) {
+      //Show Loading Status
+      loading.classList.remove("hide");
+      loadingOverlay.classList.remove("hide");
       //Post data into user object
       const response = await fetch("https://users-5kx9.onrender.com/users");
       const result = await response.json();
@@ -108,8 +113,10 @@ async function handleLogIn(e) {
       });
     }
   } catch (error) {
-    console.log(error);
   } finally {
+    //Hide Loading Status
+    loading.classList.add("hide");
+    loadingOverlay.classList.add("hide");
     email.value = "";
     password.value = "";
   }

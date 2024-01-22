@@ -14,6 +14,8 @@ const passwordError = document.querySelector(".password-error");
 const cPasswordError = document.querySelector(".cpassword-error");
 const overlay = document.querySelector(".overlay");
 const warning = document.querySelector(".warning");
+const loadingOverlay = document.querySelector(".loading-overlay");
+const loading = document.querySelector(".loading");
 function showPassword(target) {
   let grandparent = target.parentElement.parentElement;
   //hide plain eye
@@ -86,6 +88,9 @@ async function handleSubmit(e) {
   }
   //Submit data to JSON server
   if (Object.keys(errorLog).length === 0) {
+    //Show Loading Status
+    loading.classList.remove("hide");
+    loadingOverlay.classList.remove("hide");
     //Post data into user object
     const response = await fetch("https://users-5kx9.onrender.com/users", {
       method: "POST",
@@ -95,7 +100,10 @@ async function handleSubmit(e) {
       body: JSON.stringify(formData),
     });
     const result = await response.json();
-    alert("Registraion Successful");
+    //Hide Loading Status
+    loading.classList.add("hide");
+    loadingOverlay.classList.add("hide");
+    alert("Registration Successful");
 
     //Clear Input field
     name.value = "";
